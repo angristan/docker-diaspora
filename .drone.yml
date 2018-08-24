@@ -1,0 +1,41 @@
+pipeline:
+  docker-build:
+    image: plugins/docker
+    dockerfile: Dockerfile
+    repo: angristan/diaspora
+    tags: [ latest, 0.7, 0.7.6, 0.7.6.0 ]
+    secrets: [ docker_username, docker_password ]
+
+pipeline:
+  telegram-notification:
+    image: appleboy/drone-telegram
+    secrets: [ telegram_token, telegram_to ]
+    when:
+      status: [ success, failure ]
+    format: markdown
+    message: >
+      {{#success build.status}}
+      ✅ Build #{{build.number}} of `{{repo.name}}` succeeded.
+
+
+      📝 Commit by {{commit.author}} on `{{commit.branch}}`:
+
+      ```
+      {{commit.message}}
+      ```
+
+
+      🌐 {{ build.link }}
+      {{else}}
+      ❌ Build #{{build.number}} of `{{repo.name}}` failed.
+
+
+      📝 Commit by {{commit.author}} on `{{commit.branch}}`:
+
+      ```
+      {{commit.message}}
+      ```
+
+
+      🌐 {{ build.link }}
+      {{/success}}
