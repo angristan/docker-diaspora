@@ -2,7 +2,7 @@
 
 ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/microbadger/image-size/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/microbadger/layers/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/docker/pulls/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/docker/stars/angristan/diaspora.svg?maxAge=3600&style=flat-square)
 
-![](https://i.imgur.com/J50tnoC.png)
+![Diaspora Logo](https://i.imgur.com/J50tnoC.png)
 
 [Diaspora](https://diasporafoundation.org/) is a nonprofit, user-owned, distributed social network that is based upon the free Diaspora software. Diaspora consists of a group of independently owned nodes (called pods) which interoperate to form the network.
 
@@ -12,13 +12,13 @@ This image is automatically built by [Drone](https://drone.angristan.xyz/angrist
 
 - Based on the official [ruby:2.4-slim-stretch](https://hub.docker.com/_/ruby/) image
 - Running the latest stable version of [diaspora/diaspora](https://github.com/diaspora/diaspora)
-- Ran as an unprivileged user
+- Ran as an unprivileged user (see `UID` and `GID`)
 
 ### Build-time variables
 
-- **DIASPORA_VER** : Diaspora version (0.7.6.0)
-- **GID** : diaspora group id (942)
-- **UID** : diaspora user id (942)
+- **`DIASPORA_VER`** : Diaspora version (`0.7.6.0`)
+- **`GID`** : group id (`942`)
+- **`UID`** : user id (`942`)
 
 ### Volumes
 
@@ -70,7 +70,7 @@ services:
 
   unicorn:
     container_name: diaspora_unicorn
-    image: angristan/diaspora:0.7.6.0
+    image: angristan/diaspora:0.7.6
     restart: always
     command: bin/bundle exec unicorn -c config/unicorn.rb -E production
     volumes:
@@ -83,7 +83,7 @@ services:
 
   sidekiq:
     container_name: diaspora_sidekiq
-    image: angristan/diaspora:0.7.6.0
+    image: angristan/diaspora:0.7.6
     restart: always
     command: bin/bundle exec sidekiq
     volumes:
@@ -142,19 +142,19 @@ I assume you're using another container for HTTPS, but feel free to use this as 
 
 When running the instance for the first time, run this command to setup the database:
 
-```docker
+```sh
 docker-compose run --rm unicorn bin/rake db:create db:migrate
 ```
 
 Then compile the assets:
 
-```docker
+```sh
 docker-compose run --rm unicorn bin/rake assets:precompile
 ```
 
 You can now lauch your pod!
 
-```
+```sh
 docker-compose up -d
 ```
 
@@ -162,24 +162,24 @@ docker-compose up -d
 
 Modify the versions in your `docker-compose.yml`, then pull the new images:
 
-```
+```sh
 docker-compose pull
 ```
 
 Update the database:
 
-```docker
+```sh
 docker-compose run --rm unicorn bin/rake db:migrate
 ```
 
 Then compile the assets:
 
-```docker
+```sh
 docker-compose run --rm unicorn bin/rake assets:precompile
 ```
 
 Recreate containers with new images:
 
-```
+```sh
 docker-compose up -d
 ```
