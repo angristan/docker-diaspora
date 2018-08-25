@@ -16,13 +16,13 @@ This image is automatically built by [Drone](https://drone.angristan.xyz/angrist
 
 ### Build-time variables
 
-- **`DIASPORA_VER`** : Diaspora version (`0.7.6.0`)
-- **`GID`** : group id (`942`)
-- **`UID`** : user id (`942`)
+- **`DIASPORA_VER`**: Diaspora version (`0.7.6.0`)
+- **`GID`**: group id *(default: `942`)*
+- **`UID`**: user id *(default: `942`)*
 
 ### Volumes
 
-- **/diaspora/public** : location of the assets and user uploads
+- **`/diaspora/public`**: location of the assets and user uploads
 
 ## Usage
 
