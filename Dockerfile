@@ -1,6 +1,7 @@
 FROM ruby:2.4-slim-stretch
 
-LABEL maintainer="Angristan https://github.com/Angristan/dockerfiles"
+LABEL maintainer="angristan"
+LABEL source="https://github.com/angristan/docker-diaspora"
 
 ARG DIASPORA_VER=0.7.6.0
 
