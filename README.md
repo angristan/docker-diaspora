@@ -6,7 +6,9 @@
 
 [Diaspora](https://diasporafoundation.org/) is a nonprofit, user-owned, distributed social network that is based upon the free Diaspora software. Diaspora consists of a group of independently owned nodes (called pods) which interoperate to form the network.
 
-This image is automatically built by [Drone](https://drone.angristan.xyz/angristan/docker-diaspora) and pushed to the [Docker Hub](https://hub.docker.com/r/angristan/diaspora/).
+This image is automatically built by [GitLab CI](https://gitlab.com/angristan/docker-diaspora/pipelines) and pushed to the [Docker Hub](https://hub.docker.com/r/angristan/diaspora/).
+
+Besides manual updates, the images are automatically rebuilt every week to make sure all softwares in the images are up-to-date.
 
 ## Features
 
