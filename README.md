@@ -1,6 +1,6 @@
 # Diaspora*
 
-[![pipeline status](https://gitlab.com/angristan/docker-ghost/badges/master/pipeline.svg)](https://gitlab.com/angristan/docker-ghost/pipelines) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/microbadger/image-size/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/microbadger/layers/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/docker/pulls/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/docker/stars/angristan/diaspora.svg?maxAge=3600&style=flat-square)
+[![pipeline status](https://gitlab.com/angristan/docker-diaspora/badges/master/pipeline.svg)](https://gitlab.com/angristan/docker-diaspora/pipelines) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/microbadger/image-size/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/microbadger/layers/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/docker/pulls/angristan/diaspora.svg?maxAge=3600&style=flat-square) ![https://hub.docker.com/r/angristan/diaspora/](https://img.shields.io/docker/stars/angristan/diaspora.svg?maxAge=3600&style=flat-square)
 
 ![Diaspora Logo](https://i.imgur.com/J50tnoC.png)
 
