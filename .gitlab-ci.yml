@@ -5,7 +5,7 @@ variables:
   MAJOR_VER: angristan/diaspora:0
   MINOR_VER: angristan/diaspora:0.7
   PATCH_VER: angristan/diaspora:0.7.6
-  REV_VER: angristan/diaspora:0.7.6.0
+  REV_VER: angristan/diaspora:0.7.7.0
 
 stages:
   - Build image

@@ -18,7 +18,7 @@ Besides manual updates, the images are automatically rebuilt every week to make 
 
 ### Build-time variables
 
-- **`DIASPORA_VER`**: Diaspora version (`0.7.6.0`)
+- **`DIASPORA_VER`**: Diaspora version (`0.7.7.0`)
 - **`GID`**: group id *(default: `942`)*
 - **`UID`**: user id *(default: `942`)*
 
