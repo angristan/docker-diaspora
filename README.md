@@ -18,7 +18,7 @@ Besides manual updates, the images are automatically rebuilt every week to make 
 
 ### Build-time variables
 
-- **`DIASPORA_VER`**: Diaspora version (`0.7.7.1`)
+- **`DIASPORA_VER`**: Diaspora version (`0.7.8.0`)
 - **`GID`**: group id *(default: `942`)*
 - **`UID`**: user id *(default: `942`)*
 
@@ -72,7 +72,7 @@ services:
 
   unicorn:
     container_name: diaspora_unicorn
-    image: angristan/diaspora:0.7.7
+    image: angristan/diaspora:0.7.8
     restart: always
     command: bin/bundle exec unicorn -c config/unicorn.rb -E production
     volumes:
@@ -85,7 +85,7 @@ services:
 
   sidekiq:
     container_name: diaspora_sidekiq
-    image: angristan/diaspora:0.7.7
+    image: angristan/diaspora:0.7.8
     restart: always
     command: bin/bundle exec sidekiq
     volumes:
