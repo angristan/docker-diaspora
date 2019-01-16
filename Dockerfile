@@ -3,7 +3,7 @@ FROM ruby:2.4-slim-stretch
 LABEL maintainer="angristan"
 LABEL source="https://github.com/angristan/docker-diaspora"
 
-ARG DIASPORA_VER=0.7.8.0
+ARG DIASPORA_VER=0.7.9.0
 
 ENV RAILS_ENV=production \
     UID=942 \
